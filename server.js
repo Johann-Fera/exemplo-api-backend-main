@@ -2,7 +2,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-import cors from 'cors';
 
 const app = express();
 const PORT = 3000;
@@ -16,8 +15,6 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
-
-app.use(cors());
 
 // Função para ler arquivo
 function readNotes() {
